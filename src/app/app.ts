@@ -3,10 +3,11 @@ import { UpperCasePipe, LowerCasePipe} from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [UpperCasePipe],
+  imports: [UpperCasePipe, LowerCasePipe],
   template: `
     <h1>Welcome to the Angular Application!</h1>
     <p>{{ message | uppercase }}</p>
+    <p>{{ message | lowercase }}</p>
   `,
 })
 export class App {
