@@ -1,12 +1,14 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { UpperCasePipe, LowerCasePipe} from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  imports: [UpperCasePipe],
+  template: `
+    <h1>Welcome to the Angular Application!</h1>
+    <p>{{ message | uppercase }}</p>
+  `,
 })
 export class App {
-  protected readonly title = signal('pipesdemo');
+  message: string = 'Hello, Angular!';
 }
